@@ -1,26 +1,25 @@
 <template>
-  <!-- About Section -->
-  <BaseSection id="services" :index="1" aos="fade-right">
+  <!-- Over Ons Sectie -->
+  <BaseSection id="about" :index="2" aos="fade-right">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center">
-        About Us
+        Over ons
       </h2>
       <p class="text-gray-600 text-center leading-relaxed mb-8">
-        With 6 years of experience in cybersecurity, {{ businessName }} has been
-        a trusted provider of IT solutions. I am dedicated to delivering
-        high-quality cybersecurity services and exceptional customer care. My
-        expertise ensures that your technology remains secure, efficient, and
-        reliable, so you can focus on what matters most.
+        Bij {{ businessName }} bent u in veilige handen. Met een opleiding in
+        informaticabeheer en een bachelor diploma in "Computer en Cybercrime
+        professional" heb ik een sterke theoretische basis. Daarnaast heb ik 6
+        jaar ervaring opgedaan als security expert bij NVISO en ben ik in het
+        verleden 3 jaar succesvol zelfstandig geweest als ethical hacker en bug
+        bounty hunter.
       </p>
-      <div class="flex justify-center">
-        <a
-          href="#services"
-          class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-          data-aos="zoom-in"
-        >
-          Our Services
-        </a>
-      </div>
+      <p class="text-gray-600 text-center leading-relaxed mb-8">
+        Mijn expertise wordt erkend door gerenommeerde namen als Google,
+        Colruyt, Valve en Adobe. Deze unieke combinatie van opleiding,
+        praktijkervaring en erkenning in de industrie stelt mij in staat om u op
+        een eenvoudige en effectieve manier te beschermen tegen cyberdreigingen
+        en technische problemen.
+      </p>
     </div>
   </BaseSection>
 </template>

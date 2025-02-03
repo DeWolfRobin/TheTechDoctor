@@ -10,24 +10,27 @@
     <div
       class="relative container mx-auto px-4 h-full flex flex-col justify-center items-center"
     >
-      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+      <h1 class="text-7xl md:text-8xl font-bold text-white mb-4">
         {{ businessName }}
       </h1>
       <p
-        class="text-lg md:text-xl text-gray-200 max-w-2xl text-center mb-6"
+        class="text-xl md:text-2xl text-gray-200 max-w-3xl text-center mb-6"
         data-aos="fade-up"
         data-aos-delay="200"
       >
-        Expert IT Solutions for Your PC. Specializing in PC cleanup,
-        virus/malware removal, and file recovery to keep your systems running at
-        peak performance.
+        Uw digitale zorgen, onze zorg! Wij verwijderen virussen en malware,
+        herstellen verloren data van uw Android, iOS, pc's, laptops, en zelfs
+        van harde schijven, SSD's en USB-sticks. Ook optimaliseren we uw systeem
+        en zorgen we voor veilige back-ups, zodat u weer zorgeloos kunt werken
+        en genieten.
       </p>
       <a
-        href="#about"
-        class="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition-colors"
-        data-aos="zoom-in"
+        href="#services"
+        class="bg-white bg-opacity-20 backdrop-blur-sm text-white py-4 px-12 text-lg rounded-full border border-white hover:bg-opacity-40 transition duration-300 ease-in-out"
+        data-aos="fade-up"
+        data-aos-delay="300"
       >
-        Learn More
+        Ontdek meer
       </a>
     </div>
   </section>

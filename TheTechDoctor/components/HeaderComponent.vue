@@ -1,14 +1,44 @@
 <template>
   <!-- Fixed Navigation/Header -->
-  <header class="fixed w-full top-0 left-0 bg-white shadow z-50">
-    <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
-      <div class="text-xl font-bold">{{ businessName }}</div>
-      <div class="space-x-6 hidden md:block">
-        <a href="#hero" class="hover:text-blue-600">Home</a>
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#services" class="hover:text-blue-600">Services</a>
-        <a href="#pricing" class="hover:text-blue-600">Pricing</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
+  <header
+    class="fixed w-full top-0 left-0 bg-white bg-opacity-80 backdrop-blur-sm shadow z-50"
+  >
+    <nav class="max-w-6xl mx-auto flex items-center justify-between h-16 px-6">
+      <!-- Wrap the business name in an anchor so the entire area is clickable -->
+      <a href="#hero" class="text-2xl font-bold text-blue-600">
+        {{ businessName }}
+      </a>
+      <div class="hidden md:flex space-x-4">
+        <a
+          href="#hero"
+          class="flex items-center h-16 px-6 text-blue-600 border-b-4 border-transparent hover:border-blue-600 transition-all duration-300"
+        >
+          Start
+        </a>
+        <a
+          href="#services"
+          class="flex items-center h-16 px-6 text-blue-600 border-b-4 border-transparent hover:border-blue-600 transition-all duration-300"
+        >
+          Diensten
+        </a>
+        <a
+          href="#about"
+          class="flex items-center h-16 px-6 text-blue-600 border-b-4 border-transparent hover:border-blue-600 transition-all duration-300"
+        >
+          Over ons
+        </a>
+        <a
+          href="#pricing"
+          class="flex items-center h-16 px-6 text-blue-600 border-b-4 border-transparent hover:border-blue-600 transition-all duration-300"
+        >
+          Prijzen
+        </a>
+        <a
+          href="#contact"
+          class="flex items-center h-16 px-6 text-blue-600 border-b-4 border-transparent hover:border-blue-600 transition-all duration-300"
+        >
+          Contact
+        </a>
       </div>
     </nav>
   </header>

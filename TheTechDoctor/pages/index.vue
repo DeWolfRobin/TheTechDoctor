@@ -4,9 +4,9 @@
 
     <HeroComponent :businessName="businessName" />
 
-    <AboutComponent :businessName="businessName" />
-
     <ServicesComponent />
+
+    <AboutComponent :businessName="businessName" />
 
     <PricingComponent />
 

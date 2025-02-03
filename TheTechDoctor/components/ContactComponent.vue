@@ -1,8 +1,8 @@
 <template>
-  <!-- Contact Section with Contact Info -->
-  <section id="contact" class="py-20 px-4 bg-gray-50" data-aos="fade-left">
+  <!-- Contact Sectie met Contactgegevens -->
+  <BaseSection id="contact" :index="4" aos="fade-left">
     <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center">
-      Contact Info
+      Contactgegevens
     </h2>
     <div class="space-y-4 text-center text-gray-700">
       <div class="flex items-center justify-center space-x-2">
@@ -24,8 +24,9 @@
         <a
           href="mailto:robin@de-wolf.eu"
           class="hover:text-blue-600 transition-colors"
-          >robin@de-wolf.eu</a
         >
+          robin@de-wolf.eu
+        </a>
       </div>
       <div class="flex items-center justify-center space-x-2">
         <!-- Phone Icon -->
@@ -42,10 +43,13 @@
             d="M3 5a2 2 0 012-2h3.28a2 2 0 011.96 1.607l.637 3.189a2 2 0 01-.553 1.73l-2.1 2.1a11.042 11.042 0 005.516 5.516l2.1-2.1a2 2 0 011.73-.553l3.189.637A2 2 0 0121 15.72V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z"
           />
         </svg>
-        <span class="font-bold">Phone:</span>
-        <a href="tel:+32488221025" class="hover:text-blue-600 transition-colors"
-          >+32488221025</a
+        <span class="font-bold">Telefoon:</span>
+        <a
+          href="tel:+32488221025"
+          class="hover:text-blue-600 transition-colors"
         >
+          +32488221025
+        </a>
       </div>
       <div class="flex items-center justify-center space-x-2">
         <!-- Location Icon -->
@@ -68,9 +72,16 @@
             d="M12 11c-3.866 0-7 3.134-7 7h14c0-3.866-3.134-7-7-7z"
           />
         </svg>
-        <span class="font-bold">Address:</span>
+        <span class="font-bold">Adres:</span>
         <p>Spoorstraat 119, 9340 Lede</p>
       </div>
+      <div class="mt-6">
+        <p class="text-gray-600">
+          Heeft u vragen of wilt u een afspraak maken? Neem gerust contact met
+          ons op via e-mail of telefoon, of kom langs op kantoor. Wij staan
+          klaar om u te helpen en adviseren!
+        </p>
+      </div>
     </div>
-  </section>
+  </BaseSection>
 </template>
