@@ -1,75 +1,25 @@
-# Nuxt Minimal Starter
+# The Tech Doctor (Astro)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Een eenvoudige, mooie en responsieve one-page website gebouwd met Astro.
 
-## Setup
-
-Make sure to install dependencies:
+## Snel starten
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+De site draait lokaal op `http://localhost:4321`.
 
-Build the application for production:
+## Build & preview
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Structuur
+
+- `src/pages/index.astro`: de volledige one-page website.
+- `src/styles/global.css`: globale styling en responsieve layout.
+- `public/`: statische assets zoals `favicon.ico` en `robots.txt`.
