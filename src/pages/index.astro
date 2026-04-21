@@ -23,8 +23,8 @@ const overviewCards = [
 
 const standardServices = [
   "Diagnose en analyse aan huis",
-  "PC opschonen en optimaliseren",
-  "Windows herinstallatie via afhaalservice"
+  "Simpele PC opschoning (1-2 uur werk)",
+  "Diepe PC opschoning (2-6 uur werk)"
 ];
 
 const advancedServices = [
@@ -220,7 +220,7 @@ const trustPoints = [
           </div>
 
           <div class="pricing-grid">
-            <article class="price-card price-card-featured">
+            <article class="price-card">
               <h3>Diagnose aan huis</h3>
               <p class="price-highlight">{euro(pricing.diagnosisHome)}</p>
               <p class="price-subtitle">Voor ongeveer 30 minuten analyse en uitleg</p>
@@ -233,16 +233,17 @@ const trustPoints = [
             </article>
 
             <article class="price-card">
-              <h3>PC opschonen & optimalisatie</h3>
+              <h3>Simpele PC opschoning</h3>
               <p class="price-subtitle">Eenmalige vaste prijs</p>
+              <p class="price-subtitle">Richttijd: 1-2 uur werk</p>
               <div class="price-options">
                 <div class="price-option">
                   <p class="price-option-label">Aan huis</p>
-                  <p class="price-line">{euro(pricing.pcCleanupHome)}</p>
+                  <p class="price-line">{euro(pricing.simplePcCleanupHome)}</p>
                 </div>
                 <div class="price-option">
                   <p class="price-option-label">Afhaalservice</p>
-                  <p class="price-line">{euro(pricing.pcCleanupPickup)}</p>
+                  <p class="price-line">{euro(pricing.simplePcCleanupPickup)}</p>
                 </div>
               </div>
               <ul>
@@ -252,19 +253,32 @@ const trustPoints = [
               </ul>
             </article>
 
-            <article class="price-card">
-              <h3>Windows herinstallatie</h3>
-              <p class="price-line">{euro(pricing.windowsReinstallPickup)}</p>
-              <p class="price-subtitle">Eenmalige vaste prijs, enkel via afhaalservice</p>
+            <article class="price-card price-card-most-chosen">
+              <h3>Diepe PC opschoning</h3>
+              <p class="price-subtitle">Eenmalige vaste prijs</p>
+              <p class="price-subtitle">Richttijd: 2-6 uur werk</p>
+              <p class="price-subtitle"><strong>Meest gekozen optie bij trage of problematische pc's</strong></p>
+              <div class="price-options">
+                <div class="price-option">
+                  <p class="price-option-label">Aan huis</p>
+                  <p class="price-line">{euro(pricing.deepPcCleanupHome)}</p>
+                </div>
+                <div class="price-option">
+                  <p class="price-option-label">Afhaalservice</p>
+                  <p class="price-line">{euro(pricing.deepPcCleanupPickup)}</p>
+                </div>
+              </div>
               <ul>
-                <li>Volledige herinstallatie van Windows</li>
-                <li>Updates en drivers installeren</li>
-                <li>Basisinstellingen in orde brengen</li>
-                <li>Back-up van gegevens is niet inbegrepen</li>
+                <li>Grondige opschoning en uitgebreid systeemonderhoud</li>
+                <li>Diepere controle op prestaties en stabiliteit</li>
+                <li>Extra tijd voor hardnekkige vertragingen en rommelsoftware</li>
+                <li>Ideaal voor systemen die al langer problemen vertonen</li>
               </ul>
             </article>
 
-            <article class="price-card price-card-emphasis">
+            <div class="pricing-divider" aria-hidden="true"></div>
+
+            <article class="price-card">
               <h3>Geavanceerde diensten</h3>
               <p class="price-line">{euro(pricing.advancedHourly)}/uur</p>
               <p class="price-subtitle">Minimum {pricing.advancedMinimumHours} uur, alleen via afhaalservice</p>
@@ -296,6 +310,26 @@ const trustPoints = [
               </ul>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="referral" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Vriendenkorting</p>
+            <h2>Doorverwijzen loont</h2>
+            <p class="section-lead">
+              Verwijst u nieuwe klanten door? Dan krijgt u korting op uw volgende service.
+            </p>
+          </div>
+
+          <article class="price-card referral-card">
+            <ul>
+              <li>1 doorverwezen klant: <strong>10% korting</strong> op uw volgende service</li>
+              <li>2 doorverwezen klanten: <strong>15% korting</strong> op uw volgende service</li>
+              <li>3 of meer doorverwezen klanten: <strong>20% korting</strong> op uw volgende service</li>
+            </ul>
+          </article>
         </div>
       </section>
 

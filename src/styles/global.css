@@ -315,8 +315,7 @@ h3 {
   box-shadow: none;
 }
 
-.service-group-emphasis,
-.price-card-emphasis {
+.service-group-emphasis {
   border-color: #111111;
 }
 
@@ -363,8 +362,21 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.price-card-featured {
+.pricing-divider {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: var(--line-strong);
+  margin: 0.25rem 0 0.1rem;
+}
+
+.price-card-most-chosen {
+  border: 2px solid #111111;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+.referral-card {
   border-color: #111111;
+  background: var(--surface-soft);
 }
 
 .price-highlight {
@@ -461,6 +473,10 @@ h3 {
 
   .overview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-divider {
+    display: none;
   }
 }
 
