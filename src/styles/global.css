@@ -267,6 +267,18 @@ h3 {
   font-size: 1.02rem;
 }
 
+.promo-note {
+  display: inline-block;
+  margin: 0.95rem 0 0;
+  padding: 0.42rem 0.72rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
 .section-lead-left {
   margin-top: 0;
 }
