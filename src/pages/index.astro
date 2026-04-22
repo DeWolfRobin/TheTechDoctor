@@ -5,6 +5,91 @@ import { pricing } from "../data/pricing";
 const businessName = "The Tech Doctor";
 const euro = (amount) => `${String.fromCharCode(8364)}${amount}`;
 const faviconHref = `${import.meta.env.BASE_URL}favicon.ico`;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
+const siteRootUrl = new URL(import.meta.env.BASE_URL, Astro.site ?? Astro.url).toString();
+
+const seoKeywords = [
+  "pc reparatie belgie",
+  "pc repair belgium",
+  "pc repare",
+  "trage pc oplossen",
+  "slow pc fix",
+  "virus verwijderen pc",
+  "virus removal",
+  "malware verwijderen",
+  "data recovery belgium",
+  "dataherstel belgie",
+  "computer opschonen",
+  "pc dust cleaning"
+].join(", ");
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ComputerRepair"],
+    "name": businessName,
+    "url": pageUrl,
+    "telephone": "+32 488 22 10 25",
+    "email": "robin@de-wolf.eu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Spoorstraat 119",
+      "postalCode": "9340",
+      "addressLocality": "Lede",
+      "addressCountry": "BE"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Belgium" },
+      { "@type": "AdministrativeArea", "name": "East Flanders" }
+    ],
+    "availableLanguage": ["nl-BE", "en-BE"],
+    "description": "Computerhulp in Belgie voor pc reparatie, virus verwijderen, trage pc oplossen, stofreiniging en dataherstel.",
+    "serviceType": [
+      "PC reparatie / PC repair",
+      "Virus- en malwareverwijdering / virus and malware removal",
+      "Dataherstel / data recovery",
+      "PC opschoning en stofreiniging / PC cleanup and dust cleaning",
+      "Probleemoplossing voor trage computers / slow PC troubleshooting"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": businessName,
+    "url": siteRootUrl,
+    "inLanguage": ["nl-BE", "en-BE"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Doen jullie pc reparatie voor trage computers in Belgie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. We helpen met trage pc's, opstartproblemen en algemene pc reparatie in Belgie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bieden jullie virus removal en malware verwijdering aan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. We voeren virus- en malwareverwijdering uit met een duidelijke aanpak en prijsinschatting vooraf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kunnen jullie data recovery of dataherstel doen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. We bieden data recovery en dataherstel voor pc's, beschadigde systemen en externe schijven."
+        }
+      }
+    ]
+  }
+];
 
 const overviewCards = [
   {
@@ -65,16 +150,44 @@ const trustPoints = [
 ---
 
 <!doctype html>
-<html lang="nl">
+<html lang="nl-BE">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{businessName} | Computerhulp, dataherstel en malwareverwijdering</title>
+    <title>{businessName} | PC reparatie, virusverwijdering en dataherstel in Belgie</title>
     <meta
       name="description"
-      content="Heldere computerhulp in Lede en omgeving. Diagnose, opschonen, herinstallatie, dataherstel en malwareverwijdering met duidelijke prijzen en eenvoudige uitleg."
+      content="PC reparatie in Belgie: hulp bij trage pc's, virus removal, malware verwijderen, stofreiniging (dust cleaning) en data recovery/dataherstel. Service in het Nederlands en Engels."
+    />
+    <meta name="keywords" content={seoKeywords} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content={businessName} />
+    <meta name="geo.region" content="BE-VOV" />
+    <meta name="geo.placename" content="Lede, Belgium" />
+    <meta name="geo.position" content="50.9678;3.9852" />
+    <meta name="ICBM" content="50.9678, 3.9852" />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="alternate" hreflang="nl-BE" href={pageUrl} />
+    <link rel="alternate" hreflang="en-BE" href={pageUrl} />
+    <link rel="alternate" hreflang="x-default" href={pageUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={businessName} />
+    <meta property="og:locale" content="nl_BE" />
+    <meta property="og:locale:alternate" content="en_BE" />
+    <meta property="og:title" content={`${businessName} | PC repair & data recovery in Belgium`} />
+    <meta
+      property="og:description"
+      content="Computerhulp in Belgie voor pc repair/reparatie, virus removal, trage pc optimalisatie, stofreiniging en data recovery."
+    />
+    <meta property="og:url" content={pageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${businessName} | PC repair in Belgium`} />
+    <meta
+      name="twitter:description"
+      content="PC reparatie, virus verwijderen, data recovery en trage pc hulp in Belgie. Nederlands en Engels."
     />
     <link rel="icon" type="image/x-icon" href={faviconHref} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Spring naar inhoud</a>
@@ -379,6 +492,41 @@ const trustPoints = [
             <p><strong>Email</strong><br /><a href="mailto:robin@de-wolf.eu">robin@de-wolf.eu</a></p>
             <p><strong>Telefoon</strong><br /><a href="tel:+32488221025">+32 488 22 10 25</a></p>
             <p><strong>Adres</strong><br />Spoorstraat 119, 9340 Lede</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="seo-faq" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Veel gezochte hulp</p>
+            <h2>PC reparatie en data recovery in Belgie</h2>
+          </div>
+          <div class="process-grid">
+            <article class="process-card">
+              <h3>PC is traag of loopt vast?</h3>
+              <p>
+                Wij helpen bij een trage pc, opstartproblemen en algemene pc reparatie. Dit omvat ook grondige opschoning en fysieke stofreiniging (dust cleaning).
+              </p>
+            </article>
+            <article class="process-card">
+              <h3>Virus removal en malware verwijderen</h3>
+              <p>
+                Heeft u een besmette computer? We voeren virusverwijdering en malware cleaning uit in atelier voor een veilige en grondige aanpak.
+              </p>
+            </article>
+            <article class="process-card">
+              <h3>Data recovery / dataherstel</h3>
+              <p>
+                Voor verloren bestanden, beschadigde systemen of externe schijven bieden we data recovery en dataherstel met duidelijke communicatie over slaagkansen.
+              </p>
+            </article>
+            <article class="process-card">
+              <h3>Hulp in Nederlands en Engels</h3>
+              <p>
+                We ondersteunen klanten in Dutch en English. Zoek je op "PC repair Belgium" of "pc reparatie Belgie", dan ben je bij ons aan het juiste adres.
+              </p>
+            </article>
           </div>
         </div>
       </section>
