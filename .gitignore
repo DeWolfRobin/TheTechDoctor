@@ -24,4 +24,5 @@ logs
 .env.*
 !.env.example
 
-toolkitpublic/toolkit.zip
+toolkit
+public/toolkit.zip
