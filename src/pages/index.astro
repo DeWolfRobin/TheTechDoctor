@@ -12,8 +12,8 @@ const overviewCards = [
     text: "U krijgt eerst een heldere uitleg, daarna pas een voorstel. Geen technisch verhaal waar u niets aan hebt."
   },
   {
-    title: "Aan huis of afhaalservice",
-    text: "Voor eenvoudige problemen komen we aan huis. Voor grondiger werk is afhaalservice meestal sneller en voordeliger."
+    title: "Aan huis of in atelier",
+    text: "Voor eenvoudige problemen komen we aan huis. Voor grondiger werk in atelier is de aanpak meestal sneller en voordeliger."
   },
   {
     title: "Prijs vooraf",
@@ -42,7 +42,7 @@ const processSteps = [
   {
     step: "2",
     title: "We kiezen de juiste aanpak",
-    text: "Aan huis voor snelle hulp, of afhaalservice als het probleem meer tijd en testen vraagt. Ook dit advies is gratis."
+    text: "Aan huis voor snelle hulp, of in atelier als het probleem meer tijd en testen vraagt. Ook dit advies is gratis."
   },
   {
     step: "3",
@@ -110,7 +110,7 @@ const trustPoints = [
           </div>
           <div class="hero-meta" aria-label="Belangrijkste voordelen">
             <p>Duidelijke prijs vooraf</p>
-            <p>Aan huis of via afhaalservice</p>
+            <p>Aan huis of in atelier</p>
             <p>Ook voor niet-technische klanten</p>
             <p>Transportkost bij verplaatsing: {euro(pricing.pickupDropoffFee)}</p>
           </div>
@@ -142,7 +142,7 @@ const trustPoints = [
             <p class="section-kicker">Onze diensten</p>
             <h2>Hulp op maat, helder uitgelegd</h2>
             <p class="section-lead">
-              We houden de keuze eenvoudig. Standaard werk heeft een vaste prijs. Geavanceerde hulp is grondiger en daarom <strong>uitsluitend beschikbaar via afhaalservice</strong>.
+              We houden de keuze eenvoudig. Standaard werk heeft een vaste prijs. Geavanceerde hulp is grondiger en daarom <strong>uitsluitend beschikbaar in atelier</strong>.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ const trustPoints = [
             </article>
 
             <article class="service-group service-group-emphasis">
-              <p class="group-tag">Alleen afhaalservice</p>
+              <p class="group-tag">Alleen in atelier</p>
               <h3>Geavanceerde en hersteldiensten</h3>
               <ul class="check-list">
                 {advancedServices.map((item) => <li>{item}</li>)}
@@ -171,7 +171,7 @@ const trustPoints = [
 
             <article class="service-group">
               <p class="group-tag">Aanbevolen</p>
-              <h3>Waarom afhaalservice vaak beter werkt</h3>
+              <h3>Waarom werken in atelier vaak beter is</h3>
               <ul class="check-list">
                 <li>Meer tijd voor grondige analyse</li>
                 <li>Snellere afhandeling in complexe dossiers</li>
@@ -245,7 +245,7 @@ const trustPoints = [
                   <p class="price-line">{euro(pricing.simplePcCleanupHome)}</p>
                 </div>
                 <div class="price-option">
-                  <p class="price-option-label">Afhaalservice</p>
+                  <p class="price-option-label">In atelier</p>
                   <p class="price-line">{euro(pricing.simplePcCleanupPickup)}</p>
                 </div>
               </div>
@@ -267,7 +267,7 @@ const trustPoints = [
                   <p class="price-line">{euro(pricing.deepPcCleanupHome)}</p>
                 </div>
                 <div class="price-option">
-                  <p class="price-option-label">Afhaalservice</p>
+                  <p class="price-option-label">In atelier</p>
                   <p class="price-line">{euro(pricing.deepPcCleanupPickup)}</p>
                 </div>
               </div>
@@ -286,7 +286,7 @@ const trustPoints = [
             <article class="price-card">
               <h3>Geavanceerde diensten</h3>
               <p class="price-line">{euro(pricing.advancedHourly)}/uur</p>
-              <p class="price-subtitle">Minimum {pricing.advancedMinimumHours} uur, alleen via afhaalservice</p>
+              <p class="price-subtitle">Minimum {pricing.advancedMinimumHours} uur, alleen in atelier</p>
               <ul>
                 <li>Dataherstel</li>
                 <li>Virus- en malwareverwijdering</li>
@@ -371,7 +371,7 @@ const trustPoints = [
               <h2>Vlot bereikbaar voor vragen en afspraken</h2>
             </div>
             <p class="section-lead section-lead-left">
-              Twijfelt u welke dienst u nodig hebt? Neem gerust contact op. We helpen u graag kiezen tussen hulp aan huis en afhaalservice.
+              Twijfelt u welke dienst u nodig hebt? Neem gerust contact op. We helpen u graag kiezen tussen hulp aan huis en in atelier.
             </p>
           </div>
 
