@@ -12,6 +12,15 @@ const seoKeywords = [
   "pc reparatie belgie",
   "pc repair belgium",
   "pc repare",
+  "pc reparatie lede",
+  "pc reparatie wichelen",
+  "pc reparatie schellebelle",
+  "pc reparatie serskamp",
+  "pc reparatie aalst",
+  "pc reparatie gent",
+  "pc reparatie wetteren",
+  "pc reparatie erpe-mere",
+  "computerhulp oost-vlaanderen",
   "trage pc oplossen",
   "slow pc fix",
   "virus verwijderen pc",
@@ -22,6 +31,21 @@ const seoKeywords = [
   "computer opschonen",
   "pc dust cleaning"
 ].join(", ");
+
+const nearbyLocations = [
+  "Lede",
+  "Wichelen",
+  "Schellebelle",
+  "Serskamp",
+  "Aalst",
+  "Gent",
+  "Wetteren",
+  "Erpe-Mere",
+  "Laarne",
+  "Destelbergen",
+  "Melle",
+  "Oordegem"
+];
 
 const structuredData = [
   {
@@ -40,7 +64,11 @@ const structuredData = [
     },
     "areaServed": [
       { "@type": "Country", "name": "Belgium" },
-      { "@type": "AdministrativeArea", "name": "East Flanders" }
+      { "@type": "AdministrativeArea", "name": "East Flanders" },
+      ...nearbyLocations.map((name) => ({
+        "@type": "City",
+        "name": name
+      }))
     ],
     "availableLanguage": ["nl-BE", "en-BE"],
     "description": "Computerhulp in Belgie voor pc reparatie, virus verwijderen, trage pc oplossen, stofreiniging en dataherstel.",
@@ -528,6 +556,10 @@ const trustPoints = [
               </p>
             </article>
           </div>
+          <p class="section-copy">
+            Actief in regio Lede en omliggende gemeenten: {nearbyLocations.join(", ")}.
+            Ook gevonden op zoektermen zoals "pc reparatie Aalst", "computerhulp Gent", "virus verwijderen Wetteren" en "data recovery Erpe-Mere".
+          </p>
         </div>
       </section>
     </main>
