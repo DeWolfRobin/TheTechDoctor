@@ -24,7 +24,7 @@ const overviewCards = [
 const standardServices = [
   "Diagnose en analyse aan huis",
   "Simpele PC opschoning (1-2 uur werk)",
-  "Diepe PC opschoning (2-6 uur werk)"
+  "Diepe PC opschoning (tot 3 uur werk)"
 ];
 
 const advancedServices = [
@@ -112,7 +112,7 @@ const trustPoints = [
             <p>Duidelijke prijs vooraf</p>
             <p>Aan huis of via afhaalservice</p>
             <p>Ook voor niet-technische klanten</p>
-            <p>Binnen {pricing.pickupDropoffWithinKm} km ophalen en terugbrengen</p>
+            <p>Transportkost bij verplaatsing: {euro(pricing.pickupDropoffFee)}</p>
           </div>
         </div>
       </section>
@@ -259,7 +259,7 @@ const trustPoints = [
             <article class="price-card price-card-most-chosen">
               <h3>Diepe PC opschoning</h3>
               <p class="price-subtitle">Eenmalige vaste prijs</p>
-              <p class="price-subtitle">Richttijd: 2-6 uur werk</p>
+              <p class="price-subtitle">Richttijd: tot 3 uur werk</p>
               <p class="price-subtitle"><strong>Meest gekozen optie bij trage of problematische pc's</strong></p>
               <div class="price-options">
                 <div class="price-option">
@@ -275,7 +275,9 @@ const trustPoints = [
                 <li>Grondige opschoning en uitgebreid systeemonderhoud</li>
                 <li>Diepere controle op prestaties en stabiliteit</li>
                 <li>Extra tijd voor hardnekkige vertragingen en rommelsoftware</li>
+                <li>Fysieke reiniging van de pc (stof en vuil verwijderen) om oververhitting te helpen voorkomen</li>
                 <li>Ideaal voor systemen die al langer problemen vertonen</li>
+                <li>Is er na 3 uur extra tijd nodig, dan nemen we eerst contact op en schakelen we over op {euro(pricing.advancedHourly)}/uur</li>
               </ul>
             </article>
 
@@ -294,12 +296,13 @@ const trustPoints = [
             </article>
 
             <article class="price-card">
-              <h3>Ophalen & terugbrengen</h3>
-              <p class="price-line">{euro(pricing.pickupDropoffFee)} binnen {pricing.pickupDropoffWithinKm} km</p>
-              <p class="price-subtitle">Gratis vanaf {euro(pricing.pickupDropoffFreeFrom)}</p>
+              <h3>Transportkost</h3>
+              <p class="price-line">{euro(pricing.pickupDropoffFee)} per verplaatsing</p>
+              <p class="price-subtitle">Wordt altijd aangerekend als we ons moeten verplaatsen</p>
+              <p class="price-subtitle">Wordt kwijtgescholden vanaf {euro(pricing.pickupDropoffFreeFrom)}</p>
               <ul>
-                <li>Handig als u uw toestel niet zelf wilt verplaatsen</li>
-                <li>Past goed bij afhaalservice en herstelwerk</li>
+                <li>Geldt voor aan huis afspraken en andere verplaatsingen</li>
+                <li>Niet van toepassing wanneer de klant zelf langskomt</li>
               </ul>
             </article>
 
