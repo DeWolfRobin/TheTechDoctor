@@ -1,0 +1,24 @@
+---
+import { pricing } from "../../data/pricing";
+import { formatEuro } from "../../data/siteContent";
+---
+
+<section id="hero" class="hero">
+  <div class="container hero-simple">
+    <p class="eyebrow">Computerhulp in klare taal</p>
+    <h1>Snelle, duidelijke hulp voor computers en dataherstel</h1>
+    <p class="hero-copy">
+      Voor trage computers, virussen, herinstallaties en dataherstel. U krijgt altijd een begrijpelijke uitleg, een logische aanpak en een prijsinschatting vooraf.
+    </p>
+    <div class="hero-actions">
+      <a href="#pricing" class="button">Bekijk prijzen</a>
+      <a href="#contact" class="button button-secondary">Neem contact op</a>
+    </div>
+    <div class="hero-meta" aria-label="Belangrijkste voordelen">
+      <p>Duidelijke prijs vooraf</p>
+      <p>Aan huis of in atelier</p>
+      <p>Ook voor niet-technische klanten</p>
+      <p>Transportkost bij verplaatsing: {formatEuro(pricing.pickupDropoffFee)}</p>
+    </div>
+  </div>
+</section>

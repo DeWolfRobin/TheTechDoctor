@@ -1,0 +1,20 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { overviewCards } from "../../data/siteContent";
+---
+
+<section class="section section-overview">
+  <div class="container">
+    <SectionHeading kicker="Ons kenmerk" title="Dit mag u van ons verwachten" />
+    <div class="overview-grid overview-grid-minimal">
+      {
+        overviewCards.map((card) => (
+          <article class="overview-card">
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

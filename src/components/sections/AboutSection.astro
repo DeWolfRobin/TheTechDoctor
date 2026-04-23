@@ -1,0 +1,27 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { businessName, trustPoints } from "../../data/siteContent";
+---
+
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div>
+      <SectionHeading
+        kicker="Over ons"
+        title="Professioneel, maar zonder ingewikkeld te doen"
+        lead={`Bij ${businessName} combineren we opleiding in informaticabeheer en Computer & Cybercrime met jaren praktijkervaring in security en technische probleemoplossing.`}
+        left={true}
+      />
+      <p class="section-copy">
+        Dat betekent voor u geen moeilijk jargon, maar een aanpak die tegelijk grondig en geruststellend is. U moet vooral begrijpen wat er aan de hand is, wat we gaan doen en wat het zal kosten.
+      </p>
+    </div>
+
+    <div class="trust-panel">
+      <h3>Waarom klanten voor ons kiezen</h3>
+      <ul class="check-list">
+        {trustPoints.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

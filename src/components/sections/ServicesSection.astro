@@ -1,0 +1,49 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { advancedServices, standardServices, workshopBenefits } from "../../data/siteContent";
+---
+
+<section id="services" class="section">
+  <div class="container">
+    <SectionHeading kicker="Onze diensten" title="Hulp op maat, helder uitgelegd">
+      <p class="section-lead">
+        We houden de keuze eenvoudig. Standaard werk heeft een vaste prijs. Geavanceerde hulp is grondiger en daarom <strong>uitsluitend beschikbaar in atelier</strong>.
+      </p>
+    </SectionHeading>
+
+    <div class="service-groups">
+      <article class="service-group">
+        <p class="group-tag">Vaste prijs</p>
+        <h3>Standaard diensten</h3>
+        <ul class="check-list">
+          {standardServices.map((item) => <li>{item}</li>)}
+        </ul>
+        <p class="group-note">
+          Ideaal voor duidelijke, afgebakende problemen waarbij de oplossing vooraf goed in te schatten is.
+        </p>
+      </article>
+
+      <article class="service-group service-group-emphasis">
+        <p class="group-tag">Alleen in atelier</p>
+        <h3>Geavanceerde en hersteldiensten</h3>
+        <ul class="check-list">
+          {advancedServices.map((item) => <li>{item}</li>)}
+        </ul>
+        <p class="group-note">
+          Deze opdrachten vragen meer tijd, testen of gespecialiseerde tools. Daarom voeren we ze niet aan huis uit.
+        </p>
+      </article>
+
+      <article class="service-group">
+        <p class="group-tag">Aanbevolen</p>
+        <h3>Waarom werken in atelier vaak beter is</h3>
+        <ul class="check-list">
+          {workshopBenefits.map((item) => <li>{item}</li>)}
+        </ul>
+        <p class="group-note">
+          Voor ingewikkelde problemen is dit meestal de snelste en meest betrouwbare aanpak.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>

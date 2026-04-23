@@ -1,0 +1,20 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { seoFaqCards } from "../../data/siteContent";
+---
+
+<section id="seo-faq" class="section">
+  <div class="container">
+    <SectionHeading kicker="Veel gezochte hulp" title="PC reparatie en data recovery in Belgie" />
+    <div class="process-grid">
+      {
+        seoFaqCards.map((card) => (
+          <article class="process-card">
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

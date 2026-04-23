@@ -1,0 +1,26 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { referralDiscounts } from "../../data/siteContent";
+---
+
+<section id="referral" class="section">
+  <div class="container">
+    <SectionHeading
+      kicker="Vriendenkorting"
+      title="Doorverwijzen loont"
+      lead="Verwijst u nieuwe klanten door? Dan krijgt u korting op uw volgende service."
+    />
+
+    <article class="price-card referral-card">
+      <ul>
+        {
+          referralDiscounts.map((item) => (
+            <li>
+              <strong>{item.label}:</strong> {item.text}
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </div>
+</section>

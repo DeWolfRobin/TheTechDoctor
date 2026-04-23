@@ -1,0 +1,12 @@
+---
+const { kicker, title, lead, left = false } = Astro.props;
+const headingClass = left ? "section-heading section-heading-left" : "section-heading";
+const leadClass = left ? "section-lead section-lead-left" : "section-lead";
+---
+
+<div class={headingClass}>
+  <p class="section-kicker">{kicker}</p>
+  <h2>{title}</h2>
+  {lead && <p class={leadClass}>{lead}</p>}
+  <slot />
+</div>

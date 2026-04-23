@@ -1,0 +1,28 @@
+---
+import { businessName, contact, navLinks } from "../../data/siteContent";
+---
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="#hero" class="logo">{businessName}</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      Menu
+    </button>
+    <nav class="site-nav" aria-label="Hoofdnavigatie">
+      {navLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+    <a class="nav-cta" href={`tel:${contact.phoneHref}`}>Bel nu</a>
+  </div>
+</header>
+
+<script is:inline>
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  if (toggle instanceof HTMLButtonElement && nav instanceof HTMLElement) {
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+</script>

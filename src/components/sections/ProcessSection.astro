@@ -1,0 +1,25 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { processSteps } from "../../data/siteContent";
+---
+
+<section id="process" class="section section-alt">
+  <div class="container">
+    <SectionHeading
+      kicker="Werkwijze"
+      title="Zo houden we het duidelijk en rustig"
+      lead="Het eerste contact en het advies over de juiste aanpak zijn gratis. Ook de diagnose aan huis kan gratis zijn wanneer u daarna klant wordt en een dienst laat uitvoeren."
+    />
+    <div class="process-grid">
+      {
+        processSteps.map((item) => (
+          <article class="process-card">
+            <p class="process-step">{item.step}</p>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { contact } from "../../data/siteContent";
+---
+
+<section id="contact" class="section section-contact">
+  <div class="container contact-grid">
+    <div>
+      <SectionHeading
+        kicker="Contact"
+        title="Vlot bereikbaar voor vragen en afspraken"
+        lead="Twijfelt u welke dienst u nodig hebt? Neem gerust contact op. We helpen u graag kiezen tussen hulp aan huis en in atelier."
+        left={true}
+      />
+    </div>
+
+    <div class="contact-card">
+      <p><strong>Email</strong><br /><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+      <p><strong>Telefoon</strong><br /><a href={`tel:${contact.phoneHref}`}>{contact.phoneDisplay}</a></p>
+      <p><strong>Adres</strong><br />{contact.streetAddress}, {contact.postalCode} {contact.locality}</p>
+    </div>
+  </div>
+</section>

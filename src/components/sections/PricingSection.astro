@@ -1,0 +1,114 @@
+---
+import SectionHeading from "../shared/SectionHeading.astro";
+import { pricing } from "../../data/pricing";
+import { formatEuro } from "../../data/siteContent";
+---
+
+<section id="pricing" class="section section-accent">
+  <div class="container">
+    <SectionHeading
+      kicker="Prijzen"
+      title="Duidelijke prijzen zonder verrassingen"
+      lead="We tonen eerst de eenmalige vaste prijzen, daarna de diensten op uurtarief. Zo ziet u meteen waar u aan toe bent."
+    >
+      <p class="promo-note">
+        Promotie: als opstartende zaak geven we de eerste klanten een extra korting.
+      </p>
+    </SectionHeading>
+
+    <div class="pricing-grid">
+      <article class="price-card">
+        <h3>Diagnose aan huis</h3>
+        <p class="price-highlight">{formatEuro(pricing.diagnosisHome)}</p>
+        <p class="price-subtitle">Voor ongeveer 30 minuten analyse en uitleg</p>
+        <ul>
+          <li>We stellen het probleem vast</li>
+          <li>U krijgt uitleg in begrijpelijke taal</li>
+          <li>U krijgt vooraf een prijsinschatting</li>
+          <li>Gratis als u daarna een dienst laat uitvoeren</li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <h3>Simpele PC opschoning</h3>
+        <p class="price-subtitle">Eenmalige vaste prijs</p>
+        <p class="price-subtitle">Richttijd: 1-2 uur werk</p>
+        <div class="price-options">
+          <div class="price-option">
+            <p class="price-option-label">Aan huis</p>
+            <p class="price-line">{formatEuro(pricing.simplePcCleanupHome)}</p>
+          </div>
+          <div class="price-option">
+            <p class="price-option-label">In atelier</p>
+            <p class="price-line">{formatEuro(pricing.simplePcCleanupPickup)}</p>
+          </div>
+        </div>
+        <ul>
+          <li>Tijdelijke bestanden en overbodige programma's opruimen</li>
+          <li>Betere prestaties en sneller opstarten</li>
+          <li>Basiscontrole van het systeem</li>
+        </ul>
+      </article>
+
+      <article class="price-card price-card-most-chosen">
+        <h3>Diepe PC opschoning</h3>
+        <p class="price-subtitle">Eenmalige vaste prijs</p>
+        <p class="price-subtitle">Richttijd: tot 3 uur werk</p>
+        <p class="price-subtitle"><strong>Meest gekozen optie bij trage of problematische pc's</strong></p>
+        <div class="price-options">
+          <div class="price-option">
+            <p class="price-option-label">Aan huis</p>
+            <p class="price-line">{formatEuro(pricing.deepPcCleanupHome)}</p>
+          </div>
+          <div class="price-option">
+            <p class="price-option-label">In atelier</p>
+            <p class="price-line">{formatEuro(pricing.deepPcCleanupPickup)}</p>
+          </div>
+        </div>
+        <ul>
+          <li>Grondige opschoning en uitgebreid systeemonderhoud</li>
+          <li>Diepere controle op prestaties en stabiliteit</li>
+          <li>Extra tijd voor hardnekkige vertragingen en rommelsoftware</li>
+          <li>Fysieke reiniging van de pc (stof en vuil verwijderen) om oververhitting te helpen voorkomen</li>
+          <li>Ideaal voor systemen die al langer problemen vertonen</li>
+          <li>Is er na 3 uur extra tijd nodig, dan nemen we eerst contact op en schakelen we over op {formatEuro(pricing.advancedHourly)}/uur</li>
+        </ul>
+      </article>
+
+      <div class="pricing-divider" aria-hidden="true"></div>
+
+      <article class="price-card">
+        <h3>Geavanceerde diensten</h3>
+        <p class="price-line">{formatEuro(pricing.advancedHourly)}/uur</p>
+        <p class="price-subtitle">Minimum {pricing.advancedMinimumHours} uur, alleen in atelier</p>
+        <ul>
+          <li>Dataherstel</li>
+          <li>Virus- en malwareverwijdering</li>
+          <li>Complexe fouten en opstartproblemen</li>
+          <li>Toestemming bij hogere kosten</li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <h3>Transportkost</h3>
+        <p class="price-line">{formatEuro(pricing.pickupDropoffFee)} per verplaatsing</p>
+        <p class="price-subtitle">Wordt altijd aangerekend als we ons moeten verplaatsen</p>
+        <p class="price-subtitle">Wordt kwijtgescholden vanaf {formatEuro(pricing.pickupDropoffFreeFrom)}</p>
+        <ul>
+          <li>Geldt voor aan huis afspraken en andere verplaatsingen</li>
+          <li>Niet van toepassing wanneer de klant zelf langskomt</li>
+        </ul>
+      </article>
+
+      <article class="price-card">
+        <h3>Belangrijke info</h3>
+        <ul>
+          <li>Dataherstel kan nooit volledig gegarandeerd worden</li>
+          <li>Bij bijkomende problemen kan de prijsinschatting wijzigen, maar nooit zonder eerst contact met u op te nemen</li>
+          <li>Wachtwoorden of toegang kunnen nodig zijn</li>
+          <li>We communiceren altijd vooraf als er iets verandert</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
