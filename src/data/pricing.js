@@ -6,6 +6,7 @@ export const pricing = {
   deepPcCleanupPickup: 125,
   advancedHourly: 75,
   advancedMinimumHours: 2,
+  urgentPrioritySurcharge: 50,
   pickupDropoffWithinKm: 20,
   pickupDropoffFee: 25,
   pickupDropoffFreeFrom: 125

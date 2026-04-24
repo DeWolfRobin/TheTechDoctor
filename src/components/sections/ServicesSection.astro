@@ -1,6 +1,11 @@
 ---
 import SectionHeading from "../shared/SectionHeading.astro";
-import { advancedServices, standardServices, workshopBenefits } from "../../data/siteContent";
+import {
+  advancedServices,
+  standardServices,
+  studentSpecialServices,
+  workshopBenefits
+} from "../../data/siteContent";
 ---
 
 <section id="services" class="section">
@@ -31,6 +36,17 @@ import { advancedServices, standardServices, workshopBenefits } from "../../data
         </ul>
         <p class="group-note">
           Deze opdrachten vragen meer tijd, testen of gespecialiseerde tools. Daarom voeren we ze niet aan huis uit.
+        </p>
+      </article>
+
+      <article class="service-group service-group-emphasis">
+        <p class="group-tag">Student special</p>
+        <h3>Verloren bestanden en dringende hulp</h3>
+        <ul class="check-list">
+          {studentSpecialServices.map((item) => <li>{item}</li>)}
+        </ul>
+        <p class="group-note">
+          Voor studenten die snel weer verder moeten met schoolwerk, deadlines of examens.
         </p>
       </article>
 

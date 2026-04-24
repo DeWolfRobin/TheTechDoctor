@@ -77,6 +77,19 @@ import { formatEuro } from "../../data/siteContent";
 
       <div class="pricing-divider" aria-hidden="true"></div>
 
+      <article class="price-card price-card-most-chosen">
+        <h3>Student special</h3>
+        <p class="price-line">{formatEuro(pricing.advancedHourly)}/uur</p>
+        <p class="price-subtitle">Minimum {pricing.advancedMinimumHours} uur, zelfde tarief als geavanceerde diensten</p>
+        <ul>
+          <li>Herstel van verloren projectbestanden na crash, fout of ander probleem</li>
+          <li>Hulp wanneer uw pc problemen geeft tijdens examens, deadlines of presentaties</li>
+          <li>Ook voor HDD's, SSD's en USB-sticks</li>
+          <li>Spoed mogelijk met eerste prioriteit: toeslag van {formatEuro(pricing.urgentPrioritySurcharge)}</li>
+          <li>Dataherstel kan nooit volledig gegarandeerd worden</li>
+        </ul>
+      </article>
+
       <article class="price-card">
         <h3>Geavanceerde diensten</h3>
         <p class="price-line">{formatEuro(pricing.advancedHourly)}/uur</p>
@@ -100,15 +113,6 @@ import { formatEuro } from "../../data/siteContent";
         </ul>
       </article>
 
-      <article class="price-card">
-        <h3>Belangrijke info</h3>
-        <ul>
-          <li>Dataherstel kan nooit volledig gegarandeerd worden</li>
-          <li>Bij bijkomende problemen kan de prijsinschatting wijzigen, maar nooit zonder eerst contact met u op te nemen</li>
-          <li>Wachtwoorden of toegang kunnen nodig zijn</li>
-          <li>We communiceren altijd vooraf als er iets verandert</li>
-        </ul>
-      </article>
     </div>
   </div>
 </section>

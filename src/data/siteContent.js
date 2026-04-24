@@ -19,13 +19,13 @@ export const navLinks = [
 ];
 
 export const pageMeta = {
-  title: `${businessName} | PC reparatie, virusverwijdering en dataherstel in Belgie`,
+  title: `${businessName} | PC reparatie, studentenhulp en dataherstel in Belgie`,
   description:
-    "PC reparatie in Belgie: hulp bij trage pc's, virus removal, malware verwijderen, stofreiniging (dust cleaning) en data recovery/dataherstel. Service in het Nederlands en Engels.",
+    "PC reparatie in Belgie: hulp bij trage pc's, virus removal, malware verwijderen, studentenhulp, stofreiniging (dust cleaning) en data recovery/dataherstel. Service in het Nederlands en Engels.",
   ogDescription:
-    "Computerhulp in Belgie voor pc repair/reparatie, virus removal, trage pc optimalisatie, stofreiniging en data recovery.",
+    "Computerhulp in Belgie voor pc repair/reparatie, virus removal, trage pc optimalisatie, studentenhulp, stofreiniging en data recovery.",
   twitterDescription:
-    "PC reparatie, virus verwijderen, data recovery en trage pc hulp in Belgie. Nederlands en Engels."
+    "PC reparatie, virus verwijderen, studentenhulp, data recovery en trage pc hulp in Belgie. Nederlands en Engels."
 };
 
 export const nearbyLocations = [
@@ -77,6 +77,13 @@ export const advancedServices = [
   "Dataherstel van pc's en beschadigde systemen",
   "Virus- en malwareverwijdering",
   "Complexe fouten, opstartproblemen en problemen met externe schijven"
+];
+
+export const studentSpecialServices = [
+  "Verloren projectbestanden herstellen na een crash of ander probleem",
+  "Dringende hulp wanneer een pc problemen geeft tijdens examens, deadlines of presentaties",
+  "Dataherstel voor HDD's, SSD's en USB-sticks",
+  "Spoed mogelijk met prioriteit en een vooraf besproken spoedtoeslag"
 ];
 
 export const workshopBenefits = [
@@ -143,6 +150,10 @@ export const seoFaqCards = [
   {
     title: "Data recovery / dataherstel",
     text: "Voor verloren bestanden, beschadigde systemen of externe schijven bieden we data recovery en dataherstel met duidelijke communicatie over slaagkansen."
+  },
+  {
+    title: "Student special: projectbestanden kwijt?",
+    text: "Voor studenten helpen we bij verloren projectbestanden, crashproblemen, pc-storingen rond deadlines en herstel van HDD's, SSD's of USB-sticks. Spoed kan met prioriteit en een vooraf besproken toeslag."
   }
 ];
 
@@ -167,6 +178,11 @@ export const buildSeoKeywords = () =>
     "virus verwijderen pc",
     "virus removal",
     "malware verwijderen",
+    "studenten computerhulp",
+    "projectbestanden herstellen",
+    "usb dataherstel",
+    "ssd data recovery",
+    "hdd data recovery",
     "data recovery belgium",
     "dataherstel belgie",
     "computer opschonen",
@@ -175,7 +191,7 @@ export const buildSeoKeywords = () =>
   ].join(", ");
 
 export const buildStructuredData = ({ pageUrl, siteRootUrl, keywords }) => {
-  const seoStructuredDescription = `Computerhulp in Belgie voor pc reparatie, virus verwijderen, trage pc oplossen, stofreiniging en dataherstel. Actief in regio Lede en omliggende gemeenten: ${nearbyLocations.join(", ")}. Ook gevonden op zoektermen zoals ${seoSearchPhrases.map((phrase) => `"${phrase}"`).join(", ")}. We ondersteunen klanten in Dutch en English.`;
+  const seoStructuredDescription = `Computerhulp in Belgie voor pc reparatie, virus verwijderen, trage pc oplossen, studentenhulp, stofreiniging en dataherstel. Actief in regio Lede en omliggende gemeenten: ${nearbyLocations.join(", ")}. Ook gevonden op zoektermen zoals ${seoSearchPhrases.map((phrase) => `"${phrase}"`).join(", ")}. We ondersteunen klanten in Dutch en English.`;
 
   return [
     {
@@ -207,6 +223,8 @@ export const buildStructuredData = ({ pageUrl, siteRootUrl, keywords }) => {
         "PC reparatie / PC repair",
         "Virus- en malwareverwijdering / virus and malware removal",
         "Dataherstel / data recovery",
+        "Studentenservice voor projectbestanden en dringende computerhulp",
+        "Dataherstel voor HDD, SSD en USB",
         "PC opschoning en stofreiniging / PC cleanup and dust cleaning",
         "Probleemoplossing voor trage computers / slow PC troubleshooting"
       ]
@@ -244,6 +262,14 @@ export const buildStructuredData = ({ pageUrl, siteRootUrl, keywords }) => {
           acceptedAnswer: {
             "@type": "Answer",
             text: "Ja. We bieden data recovery en dataherstel voor pc's, beschadigde systemen en externe schijven."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Helpen jullie studenten met verloren projectbestanden of dringende pc problemen?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja. We helpen studenten met verloren projectbestanden, pc problemen tijdens belangrijke momenten en dataherstel voor HDD's, SSD's en USB-sticks. Spoed kan met prioriteit en een vooraf besproken toeslag."
           }
         }
       ]
