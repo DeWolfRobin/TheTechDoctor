@@ -1,5 +1,5 @@
 export const pricing = {
-  diagnosisHome: 40,
+  diagnosisHome: 49,
   simplePcCleanupHome: 120,
   simplePcCleanupPickup: 100,
   deepPcCleanupHome: 150,
